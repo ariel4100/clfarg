@@ -17,12 +17,30 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('home');
+Route::get('/nosotros', function () {
+    return Inertia::render('About', [
+    ]);
+})->name('nosotros');
+Route::get('/eventos', function () {
+    return Inertia::render('Event', [
+    ]);
+})->name('eventos');
+Route::get('conferencias', function () {
+    return Inertia::render('Conferencias', [
+    ]);
+})->name('conferencias');
+ 
+Route::get('/testimonios', function () {
+    return Inertia::render('Testimonios', [
+    ]);
+})->name('testimonios');
+ 
+Route::get('/contacto', function () {
+    return Inertia::render('Contact', [
+    ]);
+})->name('contacto');
 
 Route::middleware([
     'auth:sanctum',

@@ -2,3 +2,28 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    /* a {
+      @apply text-blue-600;
+    } */
+    /* label {
+      @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+    } */
+    .bg-base{
+        background: #946100;
+        /* @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white; */
+    }
+    .bt{
+        @apply no-underline px-4 py-2 rounded-lg font-semibold;
+    }
+  }
