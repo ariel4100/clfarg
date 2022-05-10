@@ -31719,9 +31719,9 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", {
   "class": ""
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "overflow-hidden max-h-96"
+  "class": "overflow-hidden"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FFONDO%20WEB%201280x720.jpg?alt=media&token=4d64cbba-cad8-4b93-beb3-e744079c138a",
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa",
   alt: "",
   "class": "w-full"
 })])], -1
@@ -34313,18 +34313,14 @@ var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "carousel-item active"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FFONDO%20WEB%201280x720.jpg?alt=media&token=4d64cbba-cad8-4b93-beb3-e744079c138a",
+    src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa",
     "class": "d-block w-100",
     alt: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"
   }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "carousel-caption d-none d-md-block"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-    "class": "font-bold"
-  }, "¡TE ESPERAMOS!"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "text-2xl"
-  }, "CONFERENCIA MUNDIAL DEL CLF 2022"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <h1 class=\"font-bold\" >¡TE ESPERAMOS!</h1>\n                    <p class=\"text-2xl\">CONFERENCIA MUNDIAL DEL CLF 2022</p> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: "/eventos",
-    "class": "inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-3"
+    "class": "inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-5"
   }, "Ver más")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "carousel-control-prev",
     type: "button",

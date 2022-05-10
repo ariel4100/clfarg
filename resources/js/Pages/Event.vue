@@ -14,8 +14,8 @@ defineProps({
     <Head title="CONFERENCIA MUNDIAL DEL CLF 2022" /> 
     <app-layout>
         <section class="">
-            <div class="overflow-hidden max-h-96">
-                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FFONDO%20WEB%201280x720.jpg?alt=media&token=4d64cbba-cad8-4b93-beb3-e744079c138a" alt="" class="w-full">
+            <div class="overflow-hidden ">
+                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" alt="" class="w-full">
             </div>
         </section>
         <section class="">

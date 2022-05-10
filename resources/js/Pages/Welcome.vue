@@ -22,11 +22,11 @@ defineProps({
             <div class="carousel-inner">
             
                 <div class="carousel-item active">
-                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FFONDO%20WEB%201280x720.jpg?alt=media&token=4d64cbba-cad8-4b93-beb3-e744079c138a" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp">
+                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="font-bold" >¡TE ESPERAMOS!</h1>
-                    <p class="text-2xl">CONFERENCIA MUNDIAL DEL CLF 2022</p>
-                    <a href="/eventos" class="inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-3">Ver más</a>
+                    <!-- <h1 class="font-bold" >¡TE ESPERAMOS!</h1>
+                    <p class="text-2xl">CONFERENCIA MUNDIAL DEL CLF 2022</p> -->
+                    <a href="/eventos" class="inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-5">Ver más</a>
 
                 </div>
                 </div>
