@@ -190,23 +190,23 @@ defineProps({
                     <p class="">
                         <span class="">Sin alojamiento:</span>
                         <span class="font-bold"> $10.000</span>
-                        <span class="text-sm block">(Cuota del evento) Incluye comida y transporte)</span>
+                        <span class="text-sm block">(Entrada del evento + comida + transporte) </span>
 
                     </p>
                     <p class="">
                         <span class="">Con alojamiento:</span>
                         <span class="font-bold"> $26.000</span>
-                        <span class="text-sm block">4 noches (entrada + alojamiento por 4 noches) 1 habitación de 4 personas</span>
+                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 4 personas por 4 noches)</span>
                     </p>
                     <p class="">
                         <span class="">Con alojamiento:</span>
                         <span class="font-bold"> $30.000</span>
-                        <span class="text-sm block">1 habitación de 3 personas</span>
+                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 3 personas por 4 noches)</span>
                     </p>
                     <p class="">
                         <span class="">Alojamiento Matrimonial:</span>
                         <span class="font-bold"> $34.000</span>
-                        <span class="text-sm block">1 habitación matrimonial</span>
+                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación matrimonial por 4 noches)</span>
 
                     </p>
                 </div>
