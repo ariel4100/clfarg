@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-color shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2Fclf-logo.png?alt=media&token=9d10db21-8be7-423b-91e9-122563a6a8fa" alt="" class="img-fluid w-28">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/logos%2FCLF%20Nuevo%20Logo.png?alt=media&token=071e7f69-dbc0-4a50-b3e0-5cd61d9eec0f" alt="" class="img-fluid w-28">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -81,9 +81,9 @@
   <footer class="bg-[#322408] text-white p-5">
     <div class="container text-center mx-auto">
       <Link href="/">
-        <img src="/uploads/ahwey w.png" alt="" class="mx-auto w-32  ">
+        <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/logos%2FCLF%20Nuevo%20Logo.png?alt=media&token=071e7f69-dbc0-4a50-b3e0-5cd61d9eec0f" alt="" class="mx-auto w-32 brightness-[100] ">
       </Link>
-       <div class=" ">
+       <div class=" mt-4">
                              <!-- Facebook -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-white border m-1"

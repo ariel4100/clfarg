@@ -29836,7 +29836,7 @@ var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
     "class": "navbar-brand",
     href: "/"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2Fclf-logo.png?alt=media&token=9d10db21-8be7-423b-91e9-122563a6a8fa",
+    src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/logos%2FCLF%20Nuevo%20Logo.png?alt=media&token=071e7f69-dbc0-4a50-b3e0-5cd61d9eec0f",
     alt: "",
     "class": "img-fluid w-28"
   })], -1
@@ -29901,9 +29901,9 @@ var _hoisted_14 = {
 
 var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/uploads/ahwey w.png",
+    src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/logos%2FCLF%20Nuevo%20Logo.png?alt=media&token=071e7f69-dbc0-4a50-b3e0-5cd61d9eec0f",
     alt: "",
-    "class": "mx-auto w-32"
+    "class": "mx-auto w-32 brightness-[100]"
   }, null, -1
   /* HOISTED */
   );
@@ -29911,7 +29911,7 @@ var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
 
 var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": ""
+    "class": "mt-4"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Facebook "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "btn btn-link btn-floating btn-lg text-white border m-1",
     href: "https://www.facebook.com/CLFArgentina/",
