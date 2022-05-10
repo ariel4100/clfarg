@@ -18,8 +18,8 @@ defineProps({
                 <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FFONDO%20WEB%201280x720.jpg?alt=media&token=4d64cbba-cad8-4b93-beb3-e744079c138a" alt="" class="w-full">
             </div>
         </section>
-        <section class="py-20">
-            <div class="container">
+        <section class="">
+            <div class="container py-20">
                 <div class="row">
                     <div class="col-md-6">  
                         <p class="text-lg text-gray-600">
@@ -38,9 +38,16 @@ defineProps({
                         </p>
                     </div>
                     <div class="col-md-6">  
-                         
+                         <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FPS%20Park.jpg?alt=media&token=011bdfa7-ecab-422f-8788-9ad76d8efa45" alt="" class="img-fluid">
                     </div>
                 </div>
+            </div>
+            <div class="grid grid-cols-3">  
+                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FAudiencia%20y%20Pastor%20Park.jpg?alt=media&token=fae61cb3-06f9-4486-b08a-201933e99a57" alt="" class="w-full col-span-2 h-full">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FCoro.jpg?alt=media&token=1fa8b507-3230-46da-8d1d-529e1fd227f5" alt="" class="img-fluid w-full">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FPs%20Park%20Escenario.jpg?alt=media&token=ec9f438c-5f5f-4868-b444-233b513e6b88" alt="" class="img-fluid w-full col-span-2">
+                    <!-- <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2Fescuchando.jpg?alt=media&token=c873e0f9-7108-42c6-a9c4-b4476dba747f" alt="" class="img-fluid "> -->
+                    <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FAcademia.jpg?alt=media&token=f45e4c1b-5d68-49d6-a481-b33dd8a49028" alt="" class="w-full h-full">
             </div>
         </section>
         <section class="py-20 bg-[#f3e9dc]">
@@ -174,7 +181,7 @@ defineProps({
                         <span class=" first-letter: font-bold">FECHA:</span>
                     </p>
                     <p class="font-semibold ">
-                        <span class=" ">1 (Jue) al 4 (Sab) de Junio</span>
+                        <span class=" ">1 (Mie) al 4 (Sáb) de Junio</span>
                     </p>
 
                     <p class="  font-bold">

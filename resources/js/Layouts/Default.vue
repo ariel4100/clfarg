@@ -42,9 +42,9 @@
                         <li class="nav-item">
                             <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('testimonios') ? 'border-dark  ' : ''" aria-current="page" href="/testimonios">Testimonios</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('contacto') ? 'border-dark  ' : ''" href="/">Contacto</a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown

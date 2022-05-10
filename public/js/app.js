@@ -29879,11 +29879,8 @@ var _hoisted_10 = {
 var _hoisted_11 = {
   "class": "nav-item"
 };
-var _hoisted_12 = {
-  "class": "nav-item"
-};
 
-var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_12 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: "https://wa.me/541132797885",
     "class": "whatsapp float",
@@ -29895,14 +29892,14 @@ var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_14 = {
+var _hoisted_13 = {
   "class": "bg-[#322408] text-white p-5"
 };
-var _hoisted_15 = {
+var _hoisted_14 = {
   "class": "container text-center mx-auto"
 };
 
-var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: "/uploads/ahwey w.png",
     alt: "",
@@ -29912,7 +29909,7 @@ var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": ""
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Facebook "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -29944,7 +29941,7 @@ var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "mt-4"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
@@ -29981,21 +29978,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     href: "/testimonios"
   }, "Testimonios", 2
   /* CLASS */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["nav-link font-bold hover:border-black border-b-2 border-b-transparent", _ctx.route().current('contacto') ? 'border-dark  ' : '']),
-    href: "/"
-  }, "Contacto", 2
-  /* CLASS */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                                Dropdown\n                            </a>\n                            <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n                                <li><hr class=\"dropdown-divider\"></li>\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n                            </ul>\n                        </li> ")])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <pre>\n\n      {{ $page }}\n      </pre> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default", {}, undefined, true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <transition name=\"fade\" mode=\"out-in\">\n        <router-view></router-view> \n      </transition> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-view></router-view> ")]), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item\">\n                            <a class=\"nav-link font-bold hover:border-black border-b-2 border-b-transparent \" :class=\"route().current('contacto') ? 'border-dark  ' : ''\" href=\"/\">Contacto</a>\n                        </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\n                            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                                Dropdown\n                            </a>\n                            <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                                <li><a class=\"dropdown-item\" href=\"#\">Action</a></li>\n                                <li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>\n                                <li><hr class=\"dropdown-divider\"></li>\n                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>\n                            </ul>\n                        </li> ")])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <pre>\n\n      {{ $page }}\n      </pre> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default", {}, undefined, true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <transition name=\"fade\" mode=\"out-in\">\n        <router-view></router-view> \n      </transition> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-view></router-view> ")]), _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_16];
+      return [_hoisted_15];
     }),
     _: 1
     /* STABLE */
 
-  }), _hoisted_17, _hoisted_18])])]);
+  }), _hoisted_16, _hoisted_17])])]);
 }
 
 /***/ }),
@@ -31737,9 +31729,9 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", {
-  "class": "py-20"
+  "class": ""
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "container"
+  "class": "container py-20"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -31750,7 +31742,29 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "font-semibold"
 }, "Ock Soo Park"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", quien da ponencias que lo guiarán de la obra humana hacia la obra de Dios. ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-md-6"
-})])])], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FPS%20Park.jpg?alt=media&token=011bdfa7-ecab-422f-8788-9ad76d8efa45",
+  alt: "",
+  "class": "img-fluid"
+})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "grid grid-cols-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FAudiencia%20y%20Pastor%20Park.jpg?alt=media&token=fae61cb3-06f9-4486-b08a-201933e99a57",
+  alt: "",
+  "class": "w-full col-span-2 h-full"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FCoro.jpg?alt=media&token=1fa8b507-3230-46da-8d1d-529e1fd227f5",
+  alt: "",
+  "class": "img-fluid w-full"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FPs%20Park%20Escenario.jpg?alt=media&token=ec9f438c-5f5f-4868-b444-233b513e6b88",
+  alt: "",
+  "class": "img-fluid w-full col-span-2"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <img src=\"https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2Fescuchando.jpg?alt=media&token=c873e0f9-7108-42c6-a9c4-b4476dba747f\" alt=\"\" class=\"img-fluid \"> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FAcademia.jpg?alt=media&token=f45e4c1b-5d68-49d6-a481-b33dd8a49028",
+  alt: "",
+  "class": "w-full h-full"
+})])], -1
 /* HOISTED */
 );
 
@@ -31894,7 +31908,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "font-semibold"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": ""
-}, "1 (Jue) al 4 (Sab) de Junio")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+}, "1 (Mie) al 4 (Sáb) de Junio")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "font-bold"
 }, " CUOTA DEL EVENTO: "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": ""
