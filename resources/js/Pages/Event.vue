@@ -1,13 +1,34 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from "@/Layouts/Default.vue";
-
+import { useForm } from '@inertiajs/inertia-vue3'
+    import JetButton from '@/Jetstream/Button.vue'
 defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
+    countries: Array,
+  
 });
+ 
+    const form = useForm({
+        name: '',
+        surname: '',
+        email: '',
+        
+
+     
+    })
+
+ 
+
+
+    function submit() {
+        form.post(route('mp.link',form), {
+            onFinish: () => console.log('finish'),
+        });
+    //   Inertia.post('/users', form)
+    }
+    function submiat() {
+      Inertia.post('/users', form)
+    }
 </script>
 
 <template>
@@ -211,7 +232,86 @@ defineProps({
                     </p>
                 </div>
                     </div>
-                    <div class="col-md-6">  
+                    <div class="col-md-6"> 
+                        <!-- <form @submit.prevent="submit" class="grid grid-cols-2 gap-3 mt-10 text-left ">
+                            <div class="mb-2">
+                                <label for="name">Nombre completo</label>
+                                <input v-model="form.name" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="name"> 
+                            </div>
+                            <div class="mb-2">
+                                <label for="surname">Apellidos</label>
+                                <input v-model="form.surname" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="surname">
+                            </div>
+                            
+                            <div class="mb-2">
+                                <label for="surname">DNI</label>
+                                <input v-model="form.dni" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="surname">
+                            </div>
+                            <div class="mb-2">
+                                <label for="">Género</label>
+                                <select v-model="form.genre" class="w-full p-3 border rounded">
+                                    <option value="M">Hombre</option>
+                                    <option value="F">Mujer</option>
+                                </select>
+                            </div>
+                            <div class="col-span-2 ">
+                                <div class="flex ">
+                                    <div class="mb-2 w-20">
+                                        <label for="Edad">Edad</label>
+                                        <input v-model="form.age" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="edad">
+                                    </div>
+                                    <div class="mb-2 flex-1 pl-3">
+                                        <label for="Nacionalidad">Nacionalidad</label>
+                                        <v-select v-model="form.nationality" :options="countries" label="name" class="style-chooser"></v-select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-2 col-span-2">
+                                <label for="">Correo electrónico</label>
+                                <input v-model="form.email" class="w-full p-3 border rounded" type="email" placeholder="" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone">Teléfono local</label>
+                                <input v-model="form.phone" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="phone">
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone">Celular</label>
+                                <small class=" pl-2 text-xs text-gray-500">(Vinculado con WhatsApp)</small>
+                                <input v-model="form.wp" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="wp">
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone">Nombre de Iglesia</label>
+                                <input v-model="form.churk" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="churk">
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone">Cargo</label>
+                                <select v-model="form.genre" class="w-full p-3 border rounded">
+                                    <option value="Pastor">Pastor</option>
+                                    <option value="Pastora">Pastora</option>
+                                    <option value="Presidente de Alianza o Denominación">Presidente de Alianza o Denominación</option>
+                                    <option value="Pastora (Esposa del Presidente de Alianza)">Pastora (Esposa del Presidente de Alianza)</option>
+                                    <option value="Directivo de Alianza">Directivo de Alianza</option>
+                                    <option value="Lider">Lider</option>
+                                    <option value="Funcionario">Funcionario</option>
+                                    <option value="Hermano(a)">Hermano(a)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-2 col-span-2">
+                                <label for="phone">Dirección de Iglesia</label>
+                                <input v-model="form.address" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="address">
+                            </div>
+                            
+                          
+                            <div class="flex items-center justify-end mt-4 col-span-2">
+                               
+
+                                <jet-button class="ml-4 bg-black text-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                    Registrar
+                                </jet-button>
+                            </div>
+                        </form>  -->
                         <img src="https://static.wixstatic.com/media/a37883_0f3c6dc2ffcf4191a16f070b3d2b58fa~mv2.jpeg/v1/crop/x_0,y_560,w_6720,h_3448/fill/w_576,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/24.jpeg" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -224,6 +324,16 @@ defineProps({
 
 </template>
 
-<style scoped>
+<style  >
+ 
+.style-chooser .vs__dropdown-toggle {
+  padding: 0;
+  background: white;
+}
+.style-chooser .vs__search {
+  padding: 1rem;
+  margin: 0;
+}
+
  
 </style>
