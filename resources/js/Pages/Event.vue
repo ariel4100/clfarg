@@ -316,8 +316,8 @@ defineProps({
                     </div>
                 </div>
                 <div class="text-center pt-5">
-                    <!-- <a href="/inscription"   class="inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base">REGISTRATE AHORA</a> -->
-                    <a href="https://forms.gle/uRg4SZsNTgYbsN2j8" target="_blank" class="inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base">REGISTRATE AHORA</a>
+                    <a href="/inscription"   class="inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base">REGISTRATE AHORA</a>
+                    <!-- <a href="https://forms.gle/uRg4SZsNTgYbsN2j8" target="_blank" class="inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base">REGISTRATE AHORA</a> -->
                 </div>
             </div>
         </section>

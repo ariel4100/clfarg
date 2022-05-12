@@ -32565,11 +32565,10 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "img-fluid"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "text-center pt-5"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"/inscription\"   class=\"inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base\">REGISTRATE AHORA</a> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "https://forms.gle/uRg4SZsNTgYbsN2j8",
-  target: "_blank",
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "/inscription",
   "class": "inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base"
-}, "REGISTRATE AHORA")])])], -1
+}, "REGISTRATE AHORA"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"https://forms.gle/uRg4SZsNTgYbsN2j8\" target=\"_blank\" class=\"inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base\">REGISTRATE AHORA</a> ")])])], -1
 /* HOISTED */
 );
 
@@ -35674,10 +35673,9 @@ var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
   }, " 1 al 4 de Junio ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": ""
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: "https://forms.gle/uRg4SZsNTgYbsN2j8",
-    target: "_blank",
+    href: "/inscription",
     "class": "block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 outline-white"
-  }, "Registrarte"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, "Registrarte"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"https://forms.gle/uRg4SZsNTgYbsN2j8\" target=\"_blank\" class=\"block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 outline-white\">Registrarte</a> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: "/eventos",
     "class": "block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mt-3"
   }, "Más información")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {

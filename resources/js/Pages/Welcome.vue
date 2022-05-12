@@ -62,7 +62,8 @@ defineProps({
                             </p>
                         </div>
                         <div class="">
-                            <a href="https://forms.gle/uRg4SZsNTgYbsN2j8" target="_blank" class="block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 outline-white">Registrarte</a>
+                            <a href="/inscription"   class="block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 outline-white">Registrarte</a>
+                            <!-- <a href="https://forms.gle/uRg4SZsNTgYbsN2j8" target="_blank" class="block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 outline-white">Registrarte</a> -->
                             <a href="/eventos" class="block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mt-3">Más información</a>
                         </div>
                     </div>
