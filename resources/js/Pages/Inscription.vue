@@ -5,6 +5,7 @@ import { useForm } from '@inertiajs/inertia-vue3'
     import JetButton from '@/Jetstream/Button.vue'
 defineProps({
     countries: Array,
+    provinces: Array,
   
 });
  
@@ -28,11 +29,35 @@ defineProps({
      
     })
 
+
+
  
 
 
     function submit() {
+        let Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+        console.log(form)
+        if(form.age < 18){
 
+        console.log('aca')
+
+            Toast.fire({
+                icon: 'info',
+                title: 'La edad tiene que ser mayor a 17 años'
+            })
+
+            return false
+        }
         Swal.fire({
             title: '¿Está seguro?',
             text: "¡No podrás revertir esto!",
@@ -53,9 +78,7 @@ defineProps({
                     // timer: 4000,
                     
                 })
-
-
-
+ 
 
                 axios.post(route('mp.link',form)).then(response => { 
                     if(response.data.data.payment == 'efectivo'){
@@ -82,8 +105,12 @@ defineProps({
                             showConfirmButton: false, 
                             timer: 4000,
                             
-                        })
-                        window.location.replace(response.data.preference.init_point);
+                        }).then((result) => {
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                window.location.replace(response.data.preference.init_point);
+                        
+                            }
+                        });
 
                         // window.location.href = response.data.preference.init_point;
                     }
@@ -109,87 +136,98 @@ defineProps({
 <template>
     <Head title="CONFERENCIA MUNDIAL DEL CLF 2022 - INSCRIPCIÓN" /> 
     <app-layout>
+
         <section class="">
             <div class="overflow-hidden ">
                 <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" alt="" class="w-full">
             </div>
         </section>
-   
+
         <section class="py-20 bg-[#f2ece0]">
+
             <div class="container">
+                <flash-messages />
+
                 <h2 class="mb-5 text-center">
                     <span class="font-bold text-[#b87e29]">CONFERENCIA MUNDIAL DEL CLF 2022 </span>
                     <!-- <span class="font-light">Info</span> -->
                 </h2>
                 
 
-                <div class="row">
-                    <div class="col-md-6">  
-                        <img src="https://static.wixstatic.com/media/a37883_0f3c6dc2ffcf4191a16f070b3d2b58fa~mv2.jpeg/v1/crop/x_0,y_560,w_6720,h_3448/fill/w_576,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/24.jpeg" alt="" class="img-fluid">
+                <form @submit.prevent="submit" class="row">
+                    <div class="col-md-6 order-2">  
+                        <img src="https://static.wixstatic.com/media/a37883_0f3c6dc2ffcf4191a16f070b3d2b58fa~mv2.jpeg/v1/crop/x_0,y_560,w_6720,h_3448/fill/w_576,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/24.jpeg" alt="" class="img-fluid d-none d-md-block">
 
                         <div class="text-2xl mt-4">
-                    <p class="font-bold ">
-                        <span class=" first-letter: font-bold">FECHA:</span>
-                    </p>
-                    <p class="font-semibold ">
-                        <span class=" ">1 (Mie) al 4 (Sáb) de Junio</span>
-                    </p>
+                            <p class="font-bold ">
+                                <span class=" first-letter: font-bold">FECHA:</span>
+                            </p>
+                            <p class="font-semibold ">
+                                <span class=" ">1 (Mie) al 4 (Sáb) de Junio</span>
+                            </p>
 
-                    <p class="  font-bold">
-                        MEDIOS DE PAGO:
-                    </p>
-                    <div class="form-check mt-3">
-                        <input class="form-check-input" type="radio"  id="p2" value="efectivo" v-model="form.payment">
-                        <label class="form-check-label" for="p2">
-                            <span class="">En efectivo:</span>
-                            <span class="text-sm block">Un encagado especifico se comunicara con usted</span>
-                        </label>
-                    </div>
-                    <div class="form-check mt-3">
-                        <input class="form-check-input" type="radio"  id="p1" value="MP" v-model="form.payment" >
-                        <label class="form-check-label" for="p1">
-                            <span class="">Pagar con Mercado Pago:</span>
-                        </label>
-                    </div>
-                    <div class="pl-3 text-lg" v-if="form.payment == 'MP'">
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio"  id="exampleRadios1" value="10000" v-model="form.option" >
-                            <label class="form-check-label" for="exampleRadios1">
-                                <span class="">Sin alojamiento:</span>
-                                <span class="font-bold"> $10.000</span>
-                                <span class="text-sm block">(Entrada del evento + comida + transporte) </span>
-                            </label>
+                            <p class="  font-bold">
+                                MEDIOS DE PAGO:
+                            </p>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="radio"  id="p2" value="efectivo" v-model="form.payment">
+                                <label class="form-check-label" for="p2">
+                                    <span class="">En efectivo:</span>
+                                    <span class="text-sm block">Un encagado especifico se comunicara con usted</span>
+                                </label>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="radio"  id="p1" value="MP" v-model="form.payment" >
+                                <label class="form-check-label" for="p1">
+                                    <span class="">Pagar con Mercado Pago:</span>
+                                </label>
+                            </div>
+                            <div class="pl-3 text-lg" v-if="form.payment == 'MP'">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio"  id="exampleRadios1" value="10000" v-model="form.option" >
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        <span class="">Sin alojamiento:</span>
+                                        <span class="font-bold"> $10.000</span>
+                                        <span class="text-sm block">(Entrada del evento + comida + transporte) </span>
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio"  id="exampleRadios2" value="26000" v-model="form.option">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        <span class="">Con alojamiento:</span>
+                                        <span class="font-bold"> $26.000</span>
+                                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 4 personas por 4 noches)</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio"  id="exampleRadios3" value="30000" v-model="form.option"  >
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        <span class="">Con alojamiento:</span>
+                                        <span class="font-bold"> $30.000</span>
+                                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 3 personas por 4 noches)</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio"  id="exampleRadios4" value="34000" v-model="form.option"  >
+                                    <label class="form-check-label" for="exampleRadios4">
+                                        <span class="">Alojamiento Matrimonial:</span>
+                                        <span class="font-bold"> $34.000</span>
+                                        <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación matrimonial por 4 noches)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        
                         </div>
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio"  id="exampleRadios2" value="26000" v-model="form.option">
-                            <label class="form-check-label" for="exampleRadios2">
-                                <span class="">Con alojamiento:</span>
-                                <span class="font-bold"> $26.000</span>
-                                <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 4 personas por 4 noches)</span>
-                            </label>
-                        </div>
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio"  id="exampleRadios3" value="30000" v-model="form.option"  >
-                            <label class="form-check-label" for="exampleRadios3">
-                                <span class="">Con alojamiento:</span>
-                                <span class="font-bold"> $30.000</span>
-                                <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 3 personas por 4 noches)</span>
-                            </label>
-                        </div>
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio"  id="exampleRadios4" value="34000" v-model="form.option"  >
-                            <label class="form-check-label" for="exampleRadios4">
-                                <span class="">Alojamiento Matrimonial:</span>
-                                <span class="font-bold"> $34.000</span>
-                                <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación matrimonial por 4 noches)</span>
-                            </label>
+                          <div class="flex items-center justify-center mt-5  ">
+                               
+
+                            <jet-button class="ml-4 bg-black text-lg d-block d-md-none " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                Registrar
+                            </jet-button>
                         </div>
                     </div>
-                  
-                </div>
-                    </div>
-                    <div class="col-md-6"> 
-                        <form @submit.prevent="submit" class="grid grid-cols-2 gap-3 mt-10 text-left ">
+                    <div class="col-md-6 order-1"> 
+                        <div   class="grid grid-cols-2 gap-3 mt-4 text-left ">
                             <div class="mb-2">
                                 <label for="name">Nombre completo</label>
                                 <input v-model="form.name" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="name"> 
@@ -231,11 +269,24 @@ defineProps({
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="mb-2 col-span-2">
+                            <div class="mb-2 col-span-1">
                                 <label for="">Correo electrónico</label>
                                 <input v-model="form.email" class="w-full p-3 border rounded" type="email" placeholder="" required>
                             </div>
+                            <div class="mb-2 col-span-1">
+                                <label for="Nacionalidad">Provincia</label>
+                                <v-select v-model="form.province" :options="provinces" label="name" required class="style-chooser">
+                                        <template #search="{attributes, events}">
+                                        <input
+                                        class="vs__search"
+                                        :required="!form.province"
+                                        v-bind="attributes"
+                                        v-on="events"
+                                        />
+                                    </template>
+                                </v-select>
+                            </div>
+                            
                             <div class="mb-2">
                                 <label for="phone">Teléfono local</label>
                                 <input v-model="form.phone" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="phone">
@@ -266,20 +317,18 @@ defineProps({
                             <div class="mb-2 col-span-2">
                                 <label for="phone">Dirección de Iglesia</label>
                                 <input v-model="form.address" class="w-full p-3 border rounded" type="text" placeholder="" required autofocus autocomplete="address">
-                            </div>
-                            
-                          
+                            </div> 
                             <div class="flex items-center justify-end mt-4 col-span-2">
                                
 
-                                <jet-button class="ml-4 bg-black text-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                <jet-button class="ml-4 bg-black text-lg d-none d-md-block " :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                                     Registrar
                                 </jet-button>
                             </div>
-                        </form> 
+                        </div> 
                         <!-- <img src="https://static.wixstatic.com/media/a37883_0f3c6dc2ffcf4191a16f070b3d2b58fa~mv2.jpeg/v1/crop/x_0,y_560,w_6720,h_3448/fill/w_576,h_299,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/24.jpeg" alt="" class="img-fluid"> -->
                     </div>
-                </div>
+                </form>
                 <!-- <div class="text-center pt-5">
                     <a href="https://forms.gle/uRg4SZsNTgYbsN2j8" target="_blank" class="inline-block px-4 py-2 rounded-lg text-2xl font-semibold text-center uppercase no-underline text-white border-2 bg-base">REGISTRATE AHORA</a>
                 </div> -->

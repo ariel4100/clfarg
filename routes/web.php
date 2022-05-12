@@ -5,7 +5,10 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\Country;
+use App\Models\Province;
 use App\Http\Controllers\FrontendController;
+use App\Models\Transaction;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,12 +36,38 @@ Route::get('/eventos', function () {
         'countries' => $countries
     ]);
 })->name('eventos');
-Route::get('/inscription', function () {
+Route::get('/inscription', function (Request $request) {
 
     $countries = Country::get();
+    $provinces = Province::get();
+
+     if ($request->get('preference_id') && $request->get('status') == 'approved') {
+        $preference_id = $request->get('preference_id');
+        Transaction::where('payment_id',$preference_id)->update(['status' => 'approved']);
+            // $item->status = 'completado';
+            // dd($request->all());
+            // $participant->save();
+            $request->session()->flash('success', 'Su registro fue completado! <br> Recibirá un correo electrónico con la entrada al CLF 2022');
+        }
+        // dd($request->all());
+     if ($request->get('preference_id') && $request->get('status') == 'null' ) {
+        
+            $request->session()->flash('error', 'Algo salio mal con el pago! intentelo más tarde');
+        }
+        
+        // if ($request->get('preference_id') && $request->get('status') == 'null' ){
+        //     $preference_id = $request->get('preference_id');
+        //     Transaction::where('payment_id',$preference_id)->update(['status' => $request->get('status')]);
+        //         // $item->status = 'completado';
+        //         // dd($request->all());
+        //         // $participant->save();
+        //     $request->session()->flash('success', 'Su registro fue completado! <br> Recibirá un correo electrónico para mayor información');
+    
+        // }
     // dd($countries);
     return Inertia::render('Inscription', [
-        'countries' => $countries
+        'countries' => $countries,
+        'provinces' => $provinces
     ]);
 })->name('inscription');
 Route::get('conferencias', function () {

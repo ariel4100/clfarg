@@ -4,38 +4,43 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Participant;
+use App\Models\Transaction;
 
 class FrontendController extends Controller
 {
     public function payment(Request $request)
     {
         if (Participant::where('email',$request->email)->first()){
-            $item = Participant::where('email',$request->email)->first();
+            $participant = Participant::where('email',$request->email)->first();
         }else{
-            $item = new Participant();
-            $item->name   = $request->name;
-            $item->surname   = $request->surname;
-            $item->email   = $request->email;
-            $item->dni    = $request->dni;
-            $item->nationality = @$request->nationality['name'];
-            $item->phone    = $request->phone;
-            $item->wp    = $request->wp;
-            $item->genre    = $request->genre;
-            $item->age    = $request->age;
-            $item->church    = $request->churk;
-            $item->address    = $request->address;
-            $item->position    = $request->cargo;
-            $item->data    = $request->all();
-            $item->save();
+            $participant = new Participant();
+            $participant->name   = $request->name;
+            $participant->surname   = $request->surname;
+            $participant->email   = $request->email;
+            $participant->dni    = $request->dni;
+            $participant->nationality = @$request->nationality['name'];
+            $participant->phone    = $request->phone;
+            $participant->wp    = $request->wp;
+            $participant->genre    = $request->genre;
+            $participant->age    = $request->age;
+            $participant->church    = $request->churk;
+            $participant->address    = $request->address;
+            $participant->position    = $request->cargo;
+            $participant->province    = $request->province['name'];
+            $participant->payment    = $request->payment;
+            $participant->option    = $request->option;
+            $participant->data    = $request->all();
+            $participant->save();
         }
         
         \MercadoPago\SDK::setAccessToken(env('MP_ACCESS_TOKEN'));
         // Crea un objeto de preferencia
         $preference = new \MercadoPago\Preference();
         $preference->back_urls = array(
-            "success" => route('inscription', ['status' => 'success']),
-            "failure" => route('inscription', ['status' => 'failure']),
-            "pending" => route('inscription', ['status' => 'pending']),
+            "success" => route('inscription', ['success' => 'success']),  
+            // "success" => route('inscription', ['success' => $request->session()->flash('success', 'Su registro fue completado! <br> Recibirá un correo electrónico con la entrada al CLF 2022')]),  
+            "failure" => route('inscription', ['error' => 'failure']),
+            "pending" => route('inscription', ['error' => 'pending']),
         );
         $preference->auto_return = "approved";
         // Crea un ítem en la preferencia
@@ -46,8 +51,26 @@ class FrontendController extends Controller
         $item->unit_price = floatval( $request->option  );
         $preference->items = array($item);
         $preference->statement_descriptor = 'CLF';
-    
-    
+        $preference->save();
+
+
+
+        if($participant->payment == 'MP'){
+            $transaction = new Transaction();
+            $transaction->user_id = $participant->id;
+            $transaction->payment_id = $preference->id;
+            $transaction->payment_method = $participant->payment;
+            $transaction->amount = $participant->option;
+            $transaction->currency = $participant->option;
+            $transaction->status = 'pending';
+            $transaction->save();
+        }
+
+        // if ($request->session()->exists('success')  ) {
+        //     $item->status = 'completado';
+        //     // dd($participant->status);
+        //     $participant->save();
+        // }
         // $preference->payment_methods = array(
     
     
@@ -61,7 +84,7 @@ class FrontendController extends Controller
         
         
         //   );
-        $preference->save();
+       
     
         // dd( $request->all(),$preference);
     
