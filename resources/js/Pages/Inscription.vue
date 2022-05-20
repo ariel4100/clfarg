@@ -191,19 +191,19 @@ defineProps({
                                         <span class="text-sm block">(Entrada del evento + comida + transporte) </span>
                                     </label>
                                 </div>
-                                <div class="form-check mt-3">
+                                <!-- <div class="form-check mt-3">
                                     <input class="form-check-input" type="radio"  id="exampleRadios2" value="26000" v-model="form.option">
                                     <label class="form-check-label" for="exampleRadios2">
                                         <span class="">Con alojamiento:</span>
                                         <span class="font-bold"> $26.000</span>
                                         <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 4 personas por 4 noches)</span>
                                     </label>
-                                </div>
+                                </div> -->
                                 <div class="form-check mt-3">
                                     <input class="form-check-input" type="radio"  id="exampleRadios3" value="30000" v-model="form.option"  >
                                     <label class="form-check-label" for="exampleRadios3">
                                         <span class="">Con alojamiento:</span>
-                                        <span class="font-bold"> $30.000</span>
+                                        <span class="font-bold"> $22.000</span>
                                         <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación para 3 personas por 4 noches)</span>
                                     </label>
                                 </div>
@@ -211,7 +211,7 @@ defineProps({
                                     <input class="form-check-input" type="radio"  id="exampleRadios4" value="34000" v-model="form.option"  >
                                     <label class="form-check-label" for="exampleRadios4">
                                         <span class="">Alojamiento Matrimonial:</span>
-                                        <span class="font-bold"> $34.000</span>
+                                        <span class="font-bold"> $24.000</span>
                                         <span class="text-sm block">(Entrada del evento + comida + transporte + en 1 habitación matrimonial por 4 noches)</span>
                                     </label>
                                 </div>
