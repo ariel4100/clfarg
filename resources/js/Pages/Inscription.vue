@@ -200,7 +200,7 @@ defineProps({
                                     </label>
                                 </div> -->
                                 <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio"  id="exampleRadios3" value="30000" v-model="form.option"  >
+                                    <input class="form-check-input" type="radio"  id="exampleRadios3" value="22000" v-model="form.option"  >
                                     <label class="form-check-label" for="exampleRadios3">
                                         <span class="">Con alojamiento:</span>
                                         <span class="font-bold"> $22.000</span>
@@ -208,7 +208,7 @@ defineProps({
                                     </label>
                                 </div>
                                 <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio"  id="exampleRadios4" value="34000" v-model="form.option"  >
+                                    <input class="form-check-input" type="radio"  id="exampleRadios4" value="24000" v-model="form.option"  >
                                     <label class="form-check-label" for="exampleRadios4">
                                         <span class="">Alojamiento Matrimonial:</span>
                                         <span class="font-bold"> $24.000</span>
