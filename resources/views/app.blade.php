@@ -23,7 +23,7 @@
 
         <!-- Scripts -->
         @routes
-        <script src="{{ mix('js/app.js') }}?=4" defer></script>
+        <script src="{{ mix('js/app.js') }}?=5" defer></script>
         <!-- Font Awesome -->
         <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
