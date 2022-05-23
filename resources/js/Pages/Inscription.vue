@@ -130,6 +130,10 @@ defineProps({
                     console.log(response.data)
                 }).catch(error => {
                     console.log(error)
+                     Toast.fire({
+                        icon: 'error',
+                        title: 'Algo salio mal! Verifica que los datos sean correctos y no se repitan'
+                    })
                 })
             }
         })
