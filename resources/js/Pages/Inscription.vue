@@ -101,7 +101,7 @@ defineProps({
                             
                         }).then((result) => {
                             if (result.dismiss === Swal.DismissReason.timer) {
-                                window.location.relod()
+                                window.location.reload()
                         
                             }
                         });     
