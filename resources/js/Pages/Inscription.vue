@@ -58,6 +58,13 @@ defineProps({
 
             return false
         }
+
+        // axios.post(route('email', { email: form.email})).then(response => {
+        //     console.log(response )
+             
+       
+        // })
+
         Swal.fire({
             title: '¿Está seguro?',
             text: "¡No podrás revertir esto!",
@@ -90,9 +97,14 @@ defineProps({
                                 '<div class=" " >Para completar con el pago en efectivo, un encargado se comunicara con usted via email/telefono</span></div>'+
                             ' </div>',
                             showConfirmButton: false, 
-                            // timer: 5000,
+                            timer: 5000,
                             
-                        })     
+                        }).then((result) => {
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                window.location.relod()
+                        
+                            }
+                        });     
                     }else{
 
                         Swal.fire({

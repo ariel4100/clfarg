@@ -146,3 +146,4 @@ Route::middleware([
 // })->name('mp.link');
 // Route::post('/payment/mp',  'FrontendController')->name('mp.link');
 Route::post('/payment/mp',[FrontendController::class, 'payment'])->name('mp.link');
+Route::post('/email-vericatetd',[FrontendController::class, 'verifid'])->name('email');

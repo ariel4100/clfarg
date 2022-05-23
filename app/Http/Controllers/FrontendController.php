@@ -10,9 +10,11 @@ class FrontendController extends Controller
 {
     public function payment(Request $request)
     {
-        if (Participant::where('email',$request->email)->first()){
-            $participant = Participant::where('email',$request->email)->first();
-        }else{
+
+        
+        // if (Participant::where('email',$request->email)->first()){
+        //     $participant = Participant::where('email',$request->email)->first();
+        // }else{
             $participant = new Participant();
             $participant->name   = $request->name;
             $participant->surname   = $request->surname;
@@ -31,7 +33,7 @@ class FrontendController extends Controller
             $participant->option    = $request->option;
             $participant->data    = $request->all();
             $participant->save();
-        }
+        // }
         
         \MercadoPago\SDK::setAccessToken(env('MP_ACCESS_TOKEN'));
         // Crea un objeto de preferencia
@@ -95,5 +97,33 @@ class FrontendController extends Controller
             ]
     
         );
+    }
+
+    public function verifid(Request $request)
+    {
+
+        
+        
+        $participant = Participant::where('email',utf8_decode($request->email))->first();
+    
+     
+ 
+        dd(utf8_decode($request['email']));
+        if ($participant) {
+            return response()->json([
+                'success' => 1,
+                'data' => $participant
+            ]); 
+        }else{
+        
+            return response()->json([
+                'success' => 0,
+                'data' => $participant
+            ]); 
+        }
+    
+        // dd( $request->all(),$preference);
+    
+        
     }
 }
