@@ -28,11 +28,11 @@ Route::get('/nosotros', function () {
     return Inertia::render('About', [
     ]);
 })->name('nosotros');
-Route::get('/eventos', function () {
+Route::get('/CLF-2023-Argentina', function () {
 
     $countries = Country::get();
     // dd($countries);
-    return Inertia::render('Event', [
+    return Inertia::render('Clf', [
         'countries' => $countries
     ]);
 })->name('eventos');

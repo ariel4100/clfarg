@@ -22,11 +22,12 @@ defineProps({
             <div class="carousel-inner">
             
                 <div class="carousel-item active">
-                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp">
+                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/CLF%20FEBRERO%20(1).jpg?alt=media&token=cace3e87-b404-4dc4-bbd6-f4c67cd7ef0b" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp">
+                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"> -->
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h1 class="font-bold" >¡TE ESPERAMOS!</h1>
                     <p class="text-2xl">CONFERENCIA MUNDIAL DEL CLF 2022</p> -->
-                    <a href="/eventos" class="inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-5">Ver más</a>
+                    <a :href="route('eventos')" class="inline-block px-4 py-2 rounded-2xl text-2xl font-semibold text-center uppercase no-underline text-[#946100] bg-white mb-5">Ver más</a>
 
                 </div>
                 </div>
@@ -41,7 +42,7 @@ defineProps({
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <section class="banner py-5">
+        <section v-if="0" class="banner py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">

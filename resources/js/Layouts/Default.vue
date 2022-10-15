@@ -33,7 +33,7 @@
                             <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('nosotros') ? 'border-dark ' : ''" aria-current="page" href="/nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('eventos') ? 'border-dark' : ''" aria-current="page" href="/eventos">Evento</a>
+                            <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('eventos') ? 'border-dark font-bold' : ''" aria-current="page" :href="route('eventos')">CLF 2023</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-bold hover:border-black border-b-2 border-b-transparent " :class="route().current('conferencias') ? 'border-dark' : ''" aria-current="page" href="/conferencias">Conferencias</a>
@@ -74,7 +74,7 @@
         <!-- <router-view></router-view> --> 
     </main>
 
-  <a href="https://wa.me/541132797885" class="whatsapp float" target="_blank">
+  <a href="https://wa.me/541169463001" class="whatsapp float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
