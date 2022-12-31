@@ -22,7 +22,7 @@ defineProps({
             <div class="carousel-inner">
             
                 <div class="carousel-item active">
-                <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/CLF%20FEBRERO%20(1).jpg?alt=media&token=cace3e87-b404-4dc4-bbd6-f4c67cd7ef0b" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp">
+                <img src="https://scontent.faep40-1.fna.fbcdn.net/v/t39.30808-6/321076563_1930925067251623_8651435648845091107_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeFT8c3w3SwYNVoZS5ynSioVitpT4b7ok2GK2lPhvuiTYfwoW6qVjtIqpzM9BMFQ8fcjCwtwuagOMuxnrlK_2ABu&_nc_ohc=otsDzzeH2wIAX9zK--A&_nc_ht=scontent.faep40-1.fna&oh=00_AfDYpTipjZubhOQ7efZ0Ut1TjXd8HrOrXQhQTCiJzUPcqQ&oe=63B429AB">
                 <!-- <img src="https://firebasestorage.googleapis.com/v0/b/clfargentina.appspot.com/o/images%2FBanner%20CLF%20Junio%20Facebok%20Nuevo.jpg?alt=media&token=504ffb5f-e93c-4060-bf10-5a3db7c617aa" class="d-block w-100" alt="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp"> -->
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h1 class="font-bold" >¡TE ESPERAMOS!</h1>
